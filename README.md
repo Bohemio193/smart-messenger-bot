@@ -1,26 +1,64 @@
-# Smart Messenger Bot - Versión Simplificada
+# Smart Messenger Bot v3.0 - Enhanced
 
-## ✅ MÁXIMA COMPATIBILIDAD CON RENDER
+## 🌟 NUEVAS FUNCIONALIDADES
 
-### Características:
-- ✅ Solo dependencias esenciales (Flask + requests)
-- ✅ API HTTP directa de Telegram (sin python-telegram-bot)
-- ✅ Python 3.11 garantizado
-- ✅ Reconexión automática
-- ✅ Persistencia JSON
+### Programación Avanzada:
+- ✅ Horarios específicos: `14:30`, `09:00`
+- ✅ Fechas específicas: `2024-12-25 14:30`
+- ✅ Formatos tradicionales: `5m`, `2h`, `1d`
+- ✅ Segundos para testing: `30s`
 
-### Comandos:
-- `/start` - Bienvenida
-- `/programar 5m Mensaje` - Programar mensaje
-- `/mensajes` - Ver programados
-- `/cancelar <ID>` - Cancelar mensaje
-- `/estado` - Estado del bot
-- `/ayuda` - Ayuda
+### Consulta del Clima:
+- ✅ Clima en tiempo real con OpenWeatherMap
+- ✅ Ubicaciones guardadas por usuario
+- ✅ Iconos y formato mejorado
+- ✅ Datos en español
 
-### Deployment en Render:
-1. Subir archivos a GitHub
-2. Crear Web Service en Render
-3. Configurar `TELEGRAM_BOT_TOKEN`
-4. Deploy automático
+### Comandos Mejorados:
+- `/programar 14:30 Reunión` - Horario específico
+- `/clima La Habana` - Clima de cualquier ciudad
+- `/ubicacion Madrid` - Guardar ubicación
+- `/clima` - Clima de ubicación guardada
+- `/mensajes` - Ver con tiempo restante
+- `/estado` - Estadísticas completas
 
-### Sin errores de dependencias garantizado
+## 📋 Variables de Entorno Necesarias:
+
+### Obligatoria:
+- `TELEGRAM_BOT_TOKEN` - Token del bot de Telegram
+
+### Opcional (para clima):
+- `OPENWEATHER_API_KEY` - API key de OpenWeatherMap
+  - Obtener gratis en: https://openweathermap.org/api
+  - Sin esta API, las funciones del clima no funcionarán
+
+## 🚀 Deployment en Render:
+
+1. **Configurar variables de entorno:**
+   - `TELEGRAM_BOT_TOKEN` = Tu token de BotFather
+   - `OPENWEATHER_API_KEY` = Tu API key del clima (opcional)
+
+2. **El bot funcionará sin API del clima**, solo mostrará mensaje de no configurada
+
+3. **Build automático** con las dependencias mínimas
+
+## ✨ Características Técnicas:
+
+### Persistencia Mejorada:
+- Datos en `bot_data.json`
+- Ubicaciones de usuarios guardadas
+- Mensajes programados persistentes
+
+### Programación Inteligente:
+- Parser avanzado de tiempo
+- Validación de fechas pasadas
+- Cálculo de tiempo restante
+- Formatos múltiples soportados
+
+### API del Clima:
+- Datos en tiempo real
+- Iconos meteorológicos
+- Información completa (temp, humedad, sensación)
+- Manejo de errores de API
+
+### Sin errores garantizado en Render
